@@ -1,0 +1,27 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "c7d1a2a78db246904d108926ffa099c5"
+name = "babalu-backend-draftorder"
+handle = "babalu-backend-draftorder-4"
+application_url = "https://nu-garage-possibility-court.trycloudflare.com"
+embedded = true
+
+[build]
+include_config_on_deploy = true
+
+[webhooks]
+api_version = "2025-07"
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "read_customers,read_draft_orders,read_products,write_draft_orders"
+
+[auth]
+redirect_urls = [
+  "https://nu-garage-possibility-court.trycloudflare.com/auth/callback",
+  "https://nu-garage-possibility-court.trycloudflare.com/auth/shopify/callback",
+  "https://nu-garage-possibility-court.trycloudflare.com/api/auth/callback"
+]
+
+[pos]
+embedded = false
